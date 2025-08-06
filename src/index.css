@@ -1,0 +1,334 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Primary */
+  --color-primary-main: #027fa6;
+  --color-primary-dark: #015871;
+  --color-primary-light: #0398c6;
+  --color-primary-contrast: #ffffff;
+
+  /* Secondary */
+  --color-secondary-main: #034768;
+  --color-secondary-dark: #012f48;
+  --color-secondary-light: #05618f;
+  --color-secondary-contrast: #ffffff;
+
+  /* Common */
+  --color-white: #ffffff;
+  --color-black: #0d171c;
+
+  /* Text */
+  --color-text-primary: rgba(13, 23, 28, 0.87);
+  --color-text-secondary: rgba(13, 23, 28, 0.68);
+  --color-text-disabled: rgba(13, 23, 28, 0.38);
+
+  /* Action */
+  --color-action-active: rgba(13, 23, 28, 0.87);
+  --color-action-hover: rgba(13, 23, 28, 0.05);
+  --color-action-selected: rgba(13, 23, 28, 0.08);
+  --color-action-disabled: rgba(13, 23, 28, 0.26);
+  --color-action-disabled-bg: rgba(13, 23, 28, 0.12);
+  --color-action-focus: rgba(13, 23, 28, 0.12);
+
+  /* Alert - Info */
+  --color-info-main: #3671dd;
+  --color-info-dark: #2059c0;
+  --color-info-light: #6290e4;
+  --color-info-content: #194494;
+  --color-info-contrast: #ffffff;
+
+  /* Alert - Success */
+  --color-success-main: #208334;
+  --color-success-dark: #165a24;
+  --color-success-light: #3acf58;
+  --color-success-content: #448718;
+  --color-success-contrast: #ffffff;
+
+  /* Alert - Warning */
+  --color-warning-main: #fdb528;
+  --color-warning-dark: #f09f02;
+  --color-warning-light: #fdc65b;
+  --color-warning-content: #bd7e02;
+  --color-warning-contrast: #ffffff;
+
+  /* Alert - Error */
+  --color-error-main: #dc2626;
+  --color-error-dark: #c02121;
+  --color-error-light: #e46161;
+  --color-error-content: #851a1a;
+  --color-error-contrast: #ffffff;
+
+  /* Background */
+  --color-paper: #ffffff;
+  --color-body: #f7f7f9;
+  --color-page-header: #f5f5f7;
+  --color-extra: #f9f8f9;
+  --color-border: rgba(58, 53, 65, 0.3);
+
+  /* Custom Backgrounds */
+  --color-error: #ffe9e9;
+  --color-warning: #fee9c0;
+  --color-info: #ebf9fe;
+  --color-success: #def7e3;
+  --color-primary: #dbf6ff;
+  --color-secondary: #d2f0fe;
+
+  /* States - Primary */
+  --color-state-primary-active-menu: #027fa6;
+  --color-state-primary-outlined-resting-border: rgba(2, 127, 166, 0.5);
+  --color-state-primary-outlined-hover: rgba(2, 127, 166, 0.05);
+  --color-state-primary-contained-hover: #015871;
+  --color-state-primary-outline-selected: rgba(2, 127, 166, 0.08);
+
+  /* States - Secondary */
+  --color-state-secondary-outlined-resting-border: rgba(3, 71, 104, 0.5);
+  --color-state-secondary-outlined-hover: rgba(3, 71, 104, 0.05);
+  --color-state-secondary-contained-hover: #012f48;
+  --color-state-secondary-outline-selected: rgba(3, 71, 104, 0.08);
+
+  /* States - Info */
+  --color-state-info-outlined-resting-border: rgba(54, 113, 221, 0.5);
+  --color-state-info-outlined-hover: rgba(54, 113, 221, 0.05);
+  --color-state-info-contained-hover: #2059c0;
+  --color-state-info-outline-selected: rgba(54, 113, 221, 0.08);
+
+  /* States - Success */
+  --color-state-success-outlined-resting-border: rgba(32, 131, 52, 0.5);
+  --color-state-success-outlined-hover: rgba(32, 131, 52, 0.05);
+  --color-state-success-contained-hover: #165a24;
+  --color-state-success-outline-selected: rgba(32, 131, 52, 0.08);
+
+  /* States - Warning */
+  --color-state-warning-outlined-resting-border: rgba(253, 181, 40, 0.5);
+  --color-state-warning-outlined-hover: rgba(253, 181, 40, 0.08);
+  --color-state-warning-contained-hover: #f09f02;
+  --color-state-warning-outline-selected: rgba(253, 181, 40, 0.08);
+
+  /* States - Error */
+  --color-state-error-outlined-resting-border: rgba(220, 38, 38, 0.5);
+  --color-state-error-outlined-hover: rgba(220, 38, 38, 0.05);
+  --color-state-error-contained-hover: #c02121;
+  --color-state-error-outline-selected: rgba(220, 38, 38, 0.08);
+
+  /* Grey */
+  --color-grey-50: #fafafa;
+  --color-grey-100: #f5f5f5;
+  --color-grey-200: #eeeeee;
+  --color-grey-300: #e0e0e0;
+  --color-grey-400: #bdbdbd;
+  --color-grey-500: #9e9e9e;
+  --color-grey-600: #757575;
+  --color-grey-700: #616161;
+  --color-grey-800: #424242;
+  --color-grey-900: #212121;
+
+  /* Status */
+  --color-status-01: #b42ecb;
+  --color-status-02: #a9f1ce;
+  --color-status-03: #784aff;
+  --color-status-04: #757575;
+
+  /* Others */
+  --color-divider: rgba(60, 53, 65, 0.12);
+  --color-outlined-border: rgba(96, 106, 124, 0.22);
+  --color-overlay: rgba(96, 106, 124, 0.5);
+  --color-filled-input-bg: rgba(96, 106, 124, 0.04);
+  --color-input-border: rgba(96, 106, 124, 0.22);
+  --color-snackbar: #212121;
+  --color-chip-bg: rgba(58, 53, 65, 0.08);
+  --color-rating-active: #fdb528;
+  --color-tooltip-bg: rgba(38, 39, 50, 0.9);
+  --color-ped-chip-bg: #b42ecb;
+}
+
+@theme inline {
+  /* Border and Ring */
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  /* Primary */
+  --color-primary-main: var(--color-primary-main);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-contrast: var(--color-primary-contrast);
+
+  /* Secondary */
+  --color-secondary-main: var(--color-secondary-main);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-secondary-light: var(--color-secondary-light);
+  --color-secondary-contrast: var(--color-secondary-contrast);
+
+  /* Common */
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+
+  /* Text */
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-disabled: var(--color-text-disabled);
+
+  /* Action */
+  --color-action-active: var(--color-action-active);
+  --color-action-hover: var(--color-action-hover);
+  --color-action-selected: var(--color-action-selected);
+  --color-action-disabled: var(--color-action-disabled);
+  --color-action-disabled-bg: var(--color-action-disabled-bg);
+  --color-action-focus: var(--color-action-focus);
+
+  /* Alert - Info */
+  --color-info-main: var(--color-info-main);
+  --color-info-dark: var(--color-info-dark);
+  --color-info-light: var(--color-info-light);
+  --color-info-content: var(--color-info-content);
+  --color-info-contrast: var(--color-info-contrast);
+
+  /* Alert - Success */
+  --color-success-main: var(--color-success-main);
+  --color-success-dark: var(--color-success-dark);
+  --color-success-light: var(--color-success-light);
+  --color-success-content: var(--color-success-content);
+  --color-success-contrast: var(--color-success-contrast);
+
+  /* Alert - Warning */
+  --color-warning-main: var(--color-warning-main);
+  --color-warning-dark: var(--color-warning-dark);
+  --color-warning-light: var(--color-warning-light);
+  --color-warning-content: var(--color-warning-content);
+  --color-warning-contrast: var(--color-warning-contrast);
+
+  /* Alert - Error */
+  --color-error-main: var(--color-error-main);
+  --color-error-dark: var(--color-error-dark);
+  --color-error-light: var(--color-error-light);
+  --color-error-content: var(--color-error-content);
+  --color-error-contrast: var(--color-error-contrast);
+
+  /* Background */
+  --color-paper: var(--color-paper);
+  --color-body: var(--color-body);
+  --color-page-header: var(--color-page-header);
+  --color-extra: var(--color-extra);
+  --color-border: var(--color-border);
+
+  /* Custom Backgrounds */
+  --color-error: var(--color-error);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+  --color-success: var(--color-success);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+
+  /* States - Primary */
+  --color-state-primary-active-menu: var(--color-state-primary-active-menu);
+  --color-state-primary-outlined-resting-border: var(
+    --color-state-primary-outlined-resting-border
+  );
+  --color-state-primary-outlined-hover: var(
+    --color-state-primary-outlined-hover
+  );
+  --color-state-primary-contained-hover: var(
+    --color-state-primary-contained-hover
+  );
+  --color-state-primary-outline-selected: var(
+    --color-state-primary-outline-selected
+  );
+
+  /* States - Secondary */
+  --color-state-secondary-outlined-resting-border: var(
+    --color-state-secondary-outlined-resting-border
+  );
+  --color-state-secondary-outlined-hover: var(
+    --color-state-secondary-outlined-hover
+  );
+  --color-state-secondary-contained-hover: var(
+    --color-state-secondary-contained-hover
+  );
+  --color-state-secondary-outline-selected: var(
+    --color-state-secondary-outline-selected
+  );
+
+  /* States - Info */
+  --color-state-info-outlined-resting-border: var(
+    --color-state-info-outlined-resting-border
+  );
+  --color-state-info-outlined-hover: var(--color-state-info-outlined-hover);
+  --color-state-info-contained-hover: var(--color-state-info-contained-hover);
+  --color-state-info-outline-selected: var(--color-state-info-outline-selected);
+
+  /* States - Success */
+  --color-state-success-outlined-resting-border: var(
+    --color-state-success-outlined-resting-border
+  );
+  --color-state-success-outlined-hover: var(
+    --color-state-success-outlined-hover
+  );
+  --color-state-success-contained-hover: var(
+    --color-state-success-contained-hover
+  );
+  --color-state-success-outline-selected: var(
+    --color-state-success-outline-selected
+  );
+
+  /* States - Warning */
+  --color-state-warning-outlined-resting-border: var(
+    --color-state-warning-outlined-resting-border
+  );
+  --color-state-warning-outlined-hover: var(
+    --color-state-warning-outlined-hover
+  );
+  --color-state-warning-contained-hover: var(
+    --color-state-warning-contained-hover
+  );
+  --color-state-warning-outline-selected: var(
+    --color-state-warning-outline-selected
+  );
+
+  /* States - Error */
+  --color-state-error-outlined-resting-border: var(
+    --color-state-error-outlined-resting-border
+  );
+  --color-state-error-outlined-hover: var(--color-state-error-outlined-hover);
+  --color-state-error-contained-hover: var(--color-state-error-contained-hover);
+  --color-state-error-outline-selected: var(
+    --color-state-error-outline-selected
+  );
+
+  /* Grey */
+  --color-grey-50: var(--color-grey-50);
+  --color-grey-100: var(--color-grey-100);
+  --color-grey-200: var(--color-grey-200);
+  --color-grey-300: var(--color-grey-300);
+  --color-grey-400: var(--color-grey-400);
+  --color-grey-500: var(--color-grey-500);
+  --color-grey-600: var(--color-grey-600);
+  --color-grey-700: var(--color-grey-700);
+  --color-grey-800: var(--color-grey-800);
+  --color-grey-900: var(--color-grey-900);
+
+  /* Status */
+  --color-status-01: var(--color-status-01);
+  --color-status-02: var(--color-status-02);
+  --color-status-03: var(--color-status-03);
+  --color-status-04: var(--color-status-04);
+
+  /* Others */
+  --color-divider: var(--color-divider);
+  --color-outlined-border: var(--color-outlined-border);
+  --color-overlay: var(--color-overlay);
+  --color-filled-input-bg: var(--color-filled-input-bg);
+  --color-input-border: var(--color-input-border);
+  --color-snackbar: var(--color-snackbar);
+  --color-chip-bg: var(--color-chip-bg);
+  --color-rating-active: var(--color-rating-active);
+  --color-tooltip-bg: var(--color-tooltip-bg);
+  --color-ped-chip-bg: var(--color-ped-chip-bg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
