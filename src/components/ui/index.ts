@@ -1,4 +1,7 @@
+export * from './Alert'
 export * from './Button'
 export * from './ButtonGroup'
 export * from './Checkbox'
+export * from './Divider'
 export * from './IconButton'
+export * from './Label'

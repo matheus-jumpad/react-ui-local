@@ -1,8 +1,12 @@
 import { ChevronDown, Home, Star } from 'lucide-react'
-import { Checkbox } from './components/ui'
-import { Button } from './components/ui/Button'
-import { ButtonGroup, ButtonGroupItem } from './components/ui/ButtonGroup'
-import { IconButton } from './components/ui/IconButton'
+import {
+  Button,
+  ButtonGroup,
+  ButtonGroupItem,
+  Checkbox,
+  Divider,
+  IconButton,
+} from './components/ui'
 
 function App() {
   const variants = ['contained', 'outlined', 'text'] as const
@@ -17,6 +21,16 @@ function App() {
 
   return (
     <div className="space-y-8 p-8">
+      <h1 className="mb-6 text-3xl font-bold">Exemplos de Divider</h1>
+
+      <Divider />
+
+      <div className="border-grey-600 flex h-40 justify-center rounded-lg border">
+        <Divider orientation="vertical" />
+      </div>
+
+      <hr />
+
       <h1 className="mb-6 text-3xl font-bold">Exemplos de Checkbox</h1>
 
       <h2 className="text-xl font-semibold">Sizes</h2>
