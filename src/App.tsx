@@ -6,6 +6,7 @@ import {
   Checkbox,
   Divider,
   IconButton,
+  Skeleton,
 } from './components/ui'
 
 function App() {
@@ -21,6 +22,17 @@ function App() {
 
   return (
     <div className="space-y-8 p-8">
+      <h1 className="mb-6 text-3xl font-bold">Exemplos de Skeleton</h1>
+
+      <Skeleton variant="rectangle" isVisible={false}>
+        <p>teste</p>
+      </Skeleton>
+      <Skeleton className="h-10 w-full" variant="rectangle" />
+      <Skeleton className="h-10 w-full" variant="text" />
+      <Skeleton className="size-10" variant="circle" />
+
+      <Divider />
+
       <h1 className="mb-6 text-3xl font-bold">Exemplos de Divider</h1>
 
       <Divider />
