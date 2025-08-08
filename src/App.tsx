@@ -1,5 +1,6 @@
 import { ChevronDown, Home, Star } from 'lucide-react'
 import {
+  Alert,
   Button,
   ButtonGroup,
   ButtonGroupItem,
@@ -20,8 +21,61 @@ function App() {
     'success',
   ] as const
 
+  // const variantsAlert = ['filled', 'outlined', 'standard'] as const
+  const colorsAlert = ['error', 'warning', 'info', 'success'] as const
+
   return (
     <div className="space-y-8 p-8">
+      <h1 className="text-3xl font-bold">Exemplos de Alerts</h1>
+
+      {colorsAlert.map((color, idx) => (
+        <Alert
+          color={color}
+          variant="filled"
+          key={idx}
+          title="Lorem"
+          withCloseButton
+          withActionButton
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          vitae accusantium doloribus, recusandae neque inventore dolore eum eos
+          praesentium corrupti sit dolores sequi nemo quisquam eligendi, fugiat
+          harum vel iusto.
+        </Alert>
+      ))}
+
+      {colorsAlert.map((color, idx) => (
+        <Alert
+          color={color}
+          variant="outlined"
+          key={idx}
+          title="Lorem"
+          withCloseButton
+          withActionButton
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          vitae accusantium doloribus, recusandae neque inventore dolore eum eos
+          praesentium corrupti sit dolores sequi nemo quisquam eligendi, fugiat
+          harum vel iusto.
+        </Alert>
+      ))}
+
+      {colorsAlert.map((color, idx) => (
+        <Alert
+          color={color}
+          variant="standard"
+          key={idx}
+          title="Lorem"
+          withCloseButton
+          withActionButton
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          vitae accusantium doloribus, recusandae neque inventore dolore eum eos
+          praesentium corrupti sit dolores sequi nemo quisquam eligendi, fugiat
+          harum vel iusto.
+        </Alert>
+      ))}
+
       <h1 className="mb-6 text-3xl font-bold">Exemplos de Skeleton</h1>
 
       <Skeleton variant="rectangle" isVisible={false}>

@@ -1,2 +1,2 @@
-export * from './Alert'
-export * from './props'
+export { Alert } from './Alert'
+export type { AlertProps } from './props'
